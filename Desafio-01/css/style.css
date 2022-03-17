@@ -80,6 +80,7 @@ label {
 }
 
 @media(max-width: 768px) {
+
     h1 {
         font-size: 26px;
         line-height: 1;
