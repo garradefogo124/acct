@@ -1,0 +1,101 @@
+html {
+    font-family: 'Fredoka', sans-serif;
+    background-color: #4398c0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+    color: #FFF;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.newsletter {
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 14px;
+    border: 1px solid #000;
+}
+
+.submit {
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: #FFF;
+    background-color: #08405a;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.submit:hover {
+    background-color: #082e3f;
+}
+
+.form {
+    background: linear-gradient(180deg, #06638f, #234d5f);
+    padding: 40px;
+    margin: 0 20%;
+    border-radius: 16px;
+    border: 4px double #08405a;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.5) 0px 8px 16px -8px;
+}
+
+#result {
+    margin-top: 5px;
+    margin-left: -25px;
+}
+
+#result3 {
+    margin: 0;
+}
+
+.author {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    font-size: 16px;
+    color: #FFF;
+}
+
+@media(max-width: 768px) {
+    h1 {
+        font-size: 26px;
+        line-height: 1;
+    }
+
+    h2 {
+        font-size: 20px;
+        line-height: 1;
+    }
+
+    .form {
+        padding: 16px;
+        margin: 0 50px;
+    }
+
+    .newsletter {
+        margin-bottom: 16px;
+    }
+}
