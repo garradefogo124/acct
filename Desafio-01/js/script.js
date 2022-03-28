@@ -1,4 +1,4 @@
-var confirmed = false;
+let confirmed = false;
 
 const validateEmail = (email) => {
     return email.match(
