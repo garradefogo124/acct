@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 02 - ACCT</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1046/1046283.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora</h1>
+        <form action="" class="form" name="Calculator">
+            <input type="text" name="result" class="field" autofocus> 
+            <input type="button" value="c" name="clean" class="btn clean" onclick="Calculator.result.value=''">
+            <br>
+
+            <input type="button" value="1" name="n1" class="btn" onclick="conta(n1.value)">
+            <input type="button" value="2" name="n2" class="btn" onclick="conta(n2.value)">
+            <input type="button" value="3" name="n3" class="btn" onclick="conta(n3.value)">
+            <input type="button" value="+" name="plus" class="btn sum" onclick="conta(plus.value)"><br>
+            
+            <input type="button" value="4" name="n4" class="btn" onclick="conta(n4.value)">
+            <input type="button" value="5" name="n5" class="btn" onclick="conta(n5.value)">
+            <input type="button" value="6" name="n6" class="btn" onclick="conta(n6.value)">
+            <input type="button" value="-" name="less" class="btn sub" onclick="conta(less.value)"><br>
+            
+            <input type="button" value="7" name="n7" class="btn" onclick="conta(n7.value)">
+            <input type="button" value="8" name="n8" class="btn" onclick="conta(n8.value)">
+            <input type="button" value="9" name="n9" class="btn" onclick="conta(n9.value)">
+            <input type="button" value="*" name="multi" class="btn mult" onclick="conta(multi.value)"><br>
+            
+            <input type="button" value="." name="dot" class="btn" onclick="conta(dot.value)">
+            <input type="button" value="0" name="n0" class="btn" onclick="conta(n0.value)">
+            <input type="button" value="/" name="divi" class="btn div" onclick="conta(divi.value)">
+            <input type="button" value="=" name="equal" class="btn equal" onclick="Calculator.result.value=eval(Calculator.result.value)">
+        </form>
+    </div>
+    <p class="micael">
+        Micael Miranda Inácio
+    </p>
+    <script>
+        function conta(valor){
+            Calculator.result.value = Calculator.result.value + valor;
+        }
+    </script>
+</body>
+</html>
