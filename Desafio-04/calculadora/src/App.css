@@ -1,0 +1,56 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  color: #fff;
+}
+
+h6 {
+  font-size: 14px;
+  margin: 15px 0 -5px 15%;
+  color: rgb(0, 255, 200);
+}
+
+.calc {
+  border: 1px solid #fff;
+  padding: 24px 16px;
+  border-radius: 34px;
+  background-color: rgb(3, 31, 47);
+}
+
+.field {
+  width: 157px;
+  height: 46px;
+  border-radius: 28px;
+  border: 1px solid rgb(0, 255, 200);
+  color: #fff;
+  padding: 0 10px;
+  margin-right: 6px;
+  font-size: 20px;
+  background-color: rgb(12, 53, 71);
+}
+
+.operation {
+  color: rgb(0, 255, 200);
+  font-weight: bold;
+  border: 2px solid rgb(7, 246, 234);
+}
+
+.btn {
+  width: 56px;
+  height: 56px;
+  margin-right: 6px;
+  margin-top: 6px;
+  border-radius: 28px;
+  border: 1px solid rgb(7, 246, 234);
+  font-size: 20px;
+  background-color: rgb(12, 53, 71);
+  color: #fff;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
