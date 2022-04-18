@@ -1,12 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import '../../App.css'
 
-class Display extends Component {
-  render() {
+function Display({value}) {
     return (
-        <input type="text" className="field" value={this.props.value}/>
+        <input type="text" className="field" value={value}/>
     );
-  }
 }
 
 export default Display;
