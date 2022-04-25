@@ -1,0 +1,10 @@
+==> COMANDOS <==
+- git init --> inicia o git
+- git add --> adiciona arquivos
+- git commit -m "message" --> faz o commit com a mensagem e deixa pronto para enviar
+- git push -u origin [name] --> envia para o repositório desejado
+- git push --> envia nas vezes seguintes sem precisar do comando anterior
+- git checkout -b [name] --> troca o lugar do commit para uma nova branch que vai ser criada
+- git checkout [name] --> troca o lugar do commit para uma branch que já existe
+- git clone [url] --> clona repositório online
+  
