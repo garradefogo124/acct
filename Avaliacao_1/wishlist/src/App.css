@@ -102,6 +102,9 @@ tr:nth-child(even) {
   background-color: rgb(194, 0, 0);
 }
 
+.space {
+  height: 100px;
+}
 
 @media(max-width: 480px) {
   table {
