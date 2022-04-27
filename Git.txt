@@ -8,3 +8,13 @@
 - git checkout [name] --> troca o lugar do commit para uma branch que já existe
 - git clone [url] --> clona repositório online
   
+==> PASSO A PASSO PARA FAZER UMA ENTREGA <==
+1. Abrir Git Bash na pasta desejada;
+2. git clone [url-do-repositorio-base];
+3. Entrar na pasta criada e abrir o git bash de novo;
+4. git checkout -b [nome-da-nova-branch];
+5. git add .;
+6. git commit -m "mensagem sobre o que foi feito";
+7. git add -u origin [nome-da-branch-que-foi-criada];
+
+= = = = = = = = FIM = = = = = = = =
