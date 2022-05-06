@@ -15,6 +15,6 @@
 4. git checkout -b [nome-da-nova-branch];
 5. git add .;
 6. git commit -m "mensagem sobre o que foi feito";
-7. git add -u origin [nome-da-branch-que-foi-criada];
+7. git push -u origin [nome-da-branch-que-foi-criada];
 
 = = = = = = = = FIM = = = = = = = =
