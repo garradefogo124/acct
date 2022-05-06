@@ -38,12 +38,11 @@ function App() {
               Altura: {results.height} m
             </p>
           </div>
-
         </div>
 
         : <h3>Pokemon não encontrado</h3>
       }
-    </div>
+    </div >
   )
 }
 
