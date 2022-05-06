@@ -1,0 +1,79 @@
+.App {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+.search {
+    padding: 8px 16px;
+    border-radius: 16px;
+    border: 1px solid #fff;
+    margin: 4px;
+    width: 300px;
+}
+
+form > button {
+    padding: 8px 16px;
+    border-radius: 16px;
+    border: 1px solid #fff;
+    margin: 4px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1px;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h1, h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+img {
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.card {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: rgb(26, 26, 24);
+    z-index: -2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+
+    margin-top: 30px;
+    max-width: 250px;
+}
+
+.sprite {
+    width: 250px;
+    margin-top: -30px;
+    z-index: -1;
+}
+
+.weight {
+    margin-top: -30px;
+}
+
+.images {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
