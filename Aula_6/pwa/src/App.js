@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import './App.css'
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       method: 'GET',
       headers: {
         'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com',
-        'X-RapidAPI-Key': process.env.REACT_APP_API_KEY
+        'X-RapidAPI-Key': 'e9f4a86425msh7747523a96ed6b2p1f9615jsn823755e7c6f7'
       }
     };
 
