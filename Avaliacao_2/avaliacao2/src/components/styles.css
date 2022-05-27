@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600&display=swap');
+:root {
+    color-scheme: dark;
+    --dark: #0C0C0C;
+    --light: ##E5E5E5;
+    --primary: #302E98;
+    --secondary: #5C51F4;
+    --tertiary: #5785EB;
+
+    --radius: 12px;
+    --font: 'Dosis', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+header {
+    background-color: var(--dark);
+    padding: 1rem;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-title {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+.card {
+    border: 1px solid #E5E5E5;
+    border-radius: var(--radius);
+    padding: 0.6rem;
+    width: 220px;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: all ease 0.5s;
+}
+.card:hover {
+    background-color: #060606;
+}
+
+h4 {
+    margin-bottom: 0.5rem;
+}
+
+.add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.add input {
+    width: 60px;
+    height: 2rem;
+
+    border: 1px solid #E5E5E5;
+    border-radius: 0.25rem;
+    margin-right: 0.5rem;
+
+    padding-left: 1rem;
+}
+
+.add button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 120px;
+    height: 2rem;
+
+    border: 1px solid #E5E5E5;
+    border-radius: 0.25rem;
+    background-color: transparent;
+
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.add button:hover {
+    background-color: #2c2c2c;
+}
+
+.add button p {
+    margin-left: 0.5rem;
+}
