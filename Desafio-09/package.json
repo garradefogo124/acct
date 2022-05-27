@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "mongodb": "^4.6.0"
+  },
+  "name": "desafio-mongo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dbcreate": "node src/create-db.js",
+    "dbinsert": "node src/insert.js",
+    "dbsearch": "node src/search.js",
+    "dbupdate": "node src/update.js",
+    "dbdelete": "node src/delete.js"
+  }
+}
