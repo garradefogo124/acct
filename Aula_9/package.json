@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "mongodb": "^4.6.0"
+  },
+  "name": "aula",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+
+  "scripts": {
+    "start": "node index.js"
+  }
+}
