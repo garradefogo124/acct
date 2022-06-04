@@ -103,3 +103,8 @@ h4 {
 .add button p {
     margin-left: 0.5rem;
 }
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+}

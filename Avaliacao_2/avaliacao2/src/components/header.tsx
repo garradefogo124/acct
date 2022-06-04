@@ -9,7 +9,7 @@ const Header = () => (
     <div className="container head">
       <Link to="/">
         <StaticImage
-          src="../images/logo.svg"
+          src="../images/logo.png"
           loading="eager"
           alt="Smash Vôlei"
           width={180}
