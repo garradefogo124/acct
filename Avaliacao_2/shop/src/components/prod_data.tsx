@@ -87,7 +87,7 @@ const data = [
     id: 13,
     image: "./images/prod13.png",
     title: "Tênis Nike Black and Pink",
-    price: 199.0,
+    price: 200.5,
     quantity: 1,
   },
   {

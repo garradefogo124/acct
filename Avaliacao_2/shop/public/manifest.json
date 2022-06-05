@@ -1,6 +1,8 @@
 {
   "short_name": "Smash Vôlei",
   "name": "Smash Vôlei - e-commerce",
+  "lang": "pt-BR",
+  "description": "Um e-commerce de venda de materiais de vôlei, tem diversos produtos e a função de adicionar ao carrinho",
   "icons": [
     {
       "src": "favicon.ico",
