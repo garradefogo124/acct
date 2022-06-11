@@ -2,7 +2,7 @@ import { MongoClient } from 'mongodb'
 
 // CONEXÃO URL
 const local = "mongodb://localhost:27017"
-const remote = "mongodb+srv://micael:tpMp3km2huYlM4Lr@cluster0.dxzaxti.mongodb.net/?retryWrites=true&w=majority"
+const remote = "mongodb+srv://micael:123@cluster0.dxzaxti.mongodb.net/?retryWrites=true&w=majority"
 
 // MONGO CLIENT 
 
