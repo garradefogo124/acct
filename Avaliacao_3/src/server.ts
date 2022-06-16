@@ -1,6 +1,7 @@
 import express = require("express");
 import axios from "axios"; // axios retorna o resultado obtido da busca do link
 
+const { toXML } = require("jstoxml");
 const { Parser } = require("json2csv");
 
 // Cria uma nova instância de aplicativo express
@@ -18,7 +19,7 @@ app.use("/home", function (_req, res) {
       <div style="text-align: center; font-family: sans-serif">
         <h1>Avaliação 3 - Requisições da API Via Cep - Micael Miranda</h1>
         <h2>localhost:${porta}/estado/cidade/logradouro/tipo-de-resposta</h2>
-        <p>tipos de resposta: json | xml | xml-download | csv</p>
+        <p>tipos de resposta: json | xml | convert-xml | xml-download | csv</p>
         <a href="http://localhost:${porta}/SP/Atibaia/Rua%20Lirio/json">exemplo: localhost:${porta}/SP/Atibaia/Rua Lirio/json</a>
       </div>
     `);
@@ -41,15 +42,28 @@ app.use("/:estado/:cidade/:logradouro/xml", async function (req, res) {
   try {
     const search = await axios.get(
       `https://viacep.com.br/ws/${req.params.estado}/${req.params.cidade}/${req.params.logradouro}/xml/`
-    ); // a própria API já retorna o formato XML, então não foi preciso realizar uma conversão
-    res.json(search.data);
+    ); // a própria API já retorna o formato XML
+    const xmlconverted = toXML(search.data);
+    res.send(xmlconverted);
+  } catch (err) {
+    res.status(400).send("Ocorreu um erro ao realizar a busca");
+  }
+});
+
+// CONVERTE JSON PARA XML
+app.use("/:estado/:cidade/:logradouro/convert-xml", async function (req, res) {
+  try {
+    const search = await axios.get(
+      `https://viacep.com.br/ws/${req.params.estado}/${req.params.cidade}/${req.params.logradouro}/json/`
+    );
+    const xmlconverted = toXML(search.data);
+    res.send(xmlconverted);
   } catch (err) {
     res.status(400).send("Ocorreu um erro ao realizar a busca");
   }
 });
 
 // FAZ O DOWNLOAD DO XML
-// é quase igual ao de cima, mas esse faz o download ao invés de exibir na tela
 app.use("/:estado/:cidade/:logradouro/xml-download", async function (req, res) {
   try {
     const search = await axios.get(

@@ -38,15 +38,17 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 exports.__esModule = true;
 var express = require("express");
 var axios_1 = require("axios"); // axios retorna o resultado obtido da busca do link
+var toXML = require("jstoxml").toXML;
 var Parser = require("json2csv").Parser;
 // Cria uma nova instância de aplicativo express
 var app = express();
 var porta = 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+// TELA INICIAL DA API, QUE DÁ INFORMAÇÕES SOBRE O USO
 app.use("/home", function (_req, res) {
     res.type("html");
-    res.send("\n      <div style=\"text-align: center; font-family: sans-serif\">\n        <h1>Avalia\u00E7\u00E3o 3 - Requisi\u00E7\u00F5es da API Via Cep - Micael Miranda</h1>\n        <h2>localhost:".concat(porta, "/estado/cidade/logradouro/tipo-de-resposta</h2>\n        <p>tipos de resposta: json | xml | xml-download | csv</p>\n        <a href=\"http://localhost:").concat(porta, "/SP/Atibaia/Rua%20Lirio/json\">exemplo: localhost:").concat(porta, "/SP/Atibaia/Rua Lirio/json</a>\n      </div>\n    "));
+    res.send("\n      <div style=\"text-align: center; font-family: sans-serif\">\n        <h1>Avalia\u00E7\u00E3o 3 - Requisi\u00E7\u00F5es da API Via Cep - Micael Miranda</h1>\n        <h2>localhost:".concat(porta, "/estado/cidade/logradouro/tipo-de-resposta</h2>\n        <p>tipos de resposta: json | xml | convert-xml | xml-download | csv</p>\n        <a href=\"http://localhost:").concat(porta, "/SP/Atibaia/Rua%20Lirio/json\">exemplo: localhost:").concat(porta, "/SP/Atibaia/Rua Lirio/json</a>\n      </div>\n    "));
 });
 // RETORNA O JSON
 app.use("/:estado/:cidade/:logradouro/json", function (req, res) {
@@ -73,7 +75,7 @@ app.use("/:estado/:cidade/:logradouro/json", function (req, res) {
 // RETORNA O XML
 app.use("/:estado/:cidade/:logradouro/xml", function (req, res) {
     return __awaiter(this, void 0, void 0, function () {
-        var search, err_2;
+        var search, xmlconverted, err_2;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -81,7 +83,8 @@ app.use("/:estado/:cidade/:logradouro/xml", function (req, res) {
                     return [4 /*yield*/, axios_1["default"].get("https://viacep.com.br/ws/".concat(req.params.estado, "/").concat(req.params.cidade, "/").concat(req.params.logradouro, "/xml/"))];
                 case 1:
                     search = _a.sent();
-                    res.json(search.data);
+                    xmlconverted = toXML(search.data);
+                    res.send(xmlconverted);
                     return [3 /*break*/, 3];
                 case 2:
                     err_2 = _a.sent();
@@ -92,11 +95,33 @@ app.use("/:estado/:cidade/:logradouro/xml", function (req, res) {
         });
     });
 });
+// CONVERTE JSON PARA XML
+app.use("/:estado/:cidade/:logradouro/convert-xml", function (req, res) {
+    return __awaiter(this, void 0, void 0, function () {
+        var search, xmlconverted, err_3;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    _a.trys.push([0, 2, , 3]);
+                    return [4 /*yield*/, axios_1["default"].get("https://viacep.com.br/ws/".concat(req.params.estado, "/").concat(req.params.cidade, "/").concat(req.params.logradouro, "/json/"))];
+                case 1:
+                    search = _a.sent();
+                    xmlconverted = toXML(search.data);
+                    res.send(xmlconverted);
+                    return [3 /*break*/, 3];
+                case 2:
+                    err_3 = _a.sent();
+                    res.status(400).send("Ocorreu um erro ao realizar a busca");
+                    return [3 /*break*/, 3];
+                case 3: return [2 /*return*/];
+            }
+        });
+    });
+});
 // FAZ O DOWNLOAD DO XML
-// é quase igual ao de cima, mas esse faz o download ao invés de exibir na tela
 app.use("/:estado/:cidade/:logradouro/xml-download", function (req, res) {
     return __awaiter(this, void 0, void 0, function () {
-        var search, err_3;
+        var search, err_4;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -113,7 +138,7 @@ app.use("/:estado/:cidade/:logradouro/xml-download", function (req, res) {
                     res.send(search.data);
                     return [3 /*break*/, 3];
                 case 2:
-                    err_3 = _a.sent();
+                    err_4 = _a.sent();
                     res.status(400).send("Ocorreu um erro ao realizar a busca");
                     return [3 /*break*/, 3];
                 case 3: return [2 /*return*/];
@@ -124,7 +149,7 @@ app.use("/:estado/:cidade/:logradouro/xml-download", function (req, res) {
 // FAZ O DOWNLOAD DO CSV
 app.use("/:estado/:cidade/:logradouro/csv", function (req, res) {
     return __awaiter(this, void 0, void 0, function () {
-        var search, json2csvParser, csv, err_4;
+        var search, json2csvParser, csv, err_5;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -144,7 +169,7 @@ app.use("/:estado/:cidade/:logradouro/csv", function (req, res) {
                     res.send(csv);
                     return [3 /*break*/, 3];
                 case 2:
-                    err_4 = _a.sent();
+                    err_5 = _a.sent();
                     res.status(400).send("Ocorreu um erro ao realizar a busca");
                     return [3 /*break*/, 3];
                 case 3: return [2 /*return*/];
