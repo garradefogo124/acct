@@ -20,7 +20,7 @@ const AnimalSchema = new mongoose.Schema({
     },
     status: {
         type: String,
-        enum: ["Saudável", "Em Recuperação", "A caminho"],
+        enum: ["Saudável", "Em recuperação", "A caminho"],
         require: true,
     },
     createdAt: {
