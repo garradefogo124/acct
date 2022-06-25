@@ -1,0 +1,54 @@
+{
+  "animals": [
+    {
+      "_id": "62ad2ae054fd9864c4bc0f55",
+      "name": "Alex",
+      "species": "Leão",
+      "gender": "M",
+      "imgUrl": "http://pm1.narvii.com/6423/6a9c0eb25be855e41f11509fce3911921fc8a92f_00.jpg",
+      "status": "Saudável",
+      "createdAt": "2022-06-18T01:31:12.064Z",
+      "__v": 0
+    },
+    {
+      "_id": "62b1b9c472d9287aba9380a1",
+      "name": "Marvin",
+      "species": "Esquilo",
+      "gender": "M",
+      "imgUrl": "https://fluencydesign.com.br/micael/img/esquilo.png",
+      "status": "Em recuperação",
+      "createdAt": "2022-06-21T12:29:56.692Z",
+      "__v": 0
+    },
+    {
+      "_id": "62b217c32033a6e55301bd86",
+      "name": "Glorious",
+      "species": "Flamingo",
+      "gender": "M",
+      "imgUrl": "https://fluencydesign.com.br/micael/img/flamingo.png",
+      "status": "Em Recuperação",
+      "createdAt": "2022-06-21T19:10:59.108Z",
+      "__v": 0
+    },
+    {
+      "_id": "62b4661a831cca555152e024",
+      "name": "Po",
+      "species": "Urso",
+      "gender": "M",
+      "imgUrl": "https://fluencydesign.com.br/micael/img/urso.png",
+      "status": "Em Recuperação",
+      "createdAt": "2022-06-23T13:09:46.587Z",
+      "__v": 0
+    },
+    {
+      "_id": "62b47032f7cdf758726ebbd8",
+      "name": "Aurora",
+      "species": "Zebra",
+      "gender": "F",
+      "imgUrl": "https://fluencydesign.com.br/micael/img/zebra.png",
+      "status": "Saudável",
+      "createdAt": "2022-06-23T13:52:50.036Z",
+      "__v": 0
+    }
+  ]
+}

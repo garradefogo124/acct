@@ -1,0 +1,32 @@
+:root {
+    --primary: #D7998E;
+    --secondary: #FFF4E8;
+    --light: #FFFCF9;
+    --lighter: #FFFFFF;
+    --dark: #535353;
+}
+
+.card {
+    width: 200px;
+    height: 220px;
+
+    border: 1px solid var(--dark);
+    background-color: var(--lighter);
+    border-radius: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: var(--dark);
+
+    margin: 0.5rem;
+
+}
+
+.genderimg {
+    margin-left: 80%;
+    margin-top: 2%;
+}
